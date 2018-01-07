@@ -1,0 +1,43 @@
+    What is namespace ?
+
+    allows you to use the same function or class name in different parts of the same program without causing a name collision.
+
+    The Scenario
+
+        Suppose you write an application that uses a function named output(). 
+        Your output() function takes all of the HTML code on your page and sends it to the user.
+
+        Later on your application gets bigger and you want to add new features. 
+        You add a library that allows you to generate RSS feeds. This library also uses a function named output() to output the final feed.
+
+        When you call output(), how does PHP know whether to use your output() function or the RSS library's output() function? It doesn't. 
+        Unless you're using namespaces.
+        
+    Example
+
+        namespace MyProject;
+
+        function output() {
+            # Output HTML page
+            echo 'HTML!';
+        }
+
+        namespace RSSLibrary;
+
+        function output(){
+            # Output RSS feed
+            echo 'RSS!';
+        }
+
+        #\MyProject\output();
+        #\RSSLibrary\output();
+
+        namespace MyProject;
+
+        output(); # Output HTML page
+        \RSSLibrary\output();
+
+================================================================================
+
+    use vs require ?
+    use is evaluated at compile-time, require at run-time 
