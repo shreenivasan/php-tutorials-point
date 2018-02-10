@@ -1,0 +1,133 @@
+What is the difference between $a and $$a?
+What are the differences between Get and post method.
+What does a special set of tags do in PHP?
+What’s the difference between include and require in PHP?
+How do you define a constant?
+Will comparison of string and integer work in PHP?
+Ternary conditional operator in PHP?
+How do I find out the number of parameters passed into function?
+How do you call a constructor for a parent class?
+What’s the special meaning of __sleep and __wakeup?
+Difference in mysql4 and mysql5 ?
+Meaning of urlencode and urldecode in php?
+Function to check password length in php?
+Difference between strstr and stristr in php?
+Meaning of Session?
+Simple mail in php?
+urlencode and urldecode in php?
+A .htaccess rule that will divert any page in another folder?
+what's difference between in_array() and array_search() in php?
+Difference between strstr and stristr in php?
+PHP explode() Function?
+PHP implode() Function?
+What is difference between php explode and implode functions?
+How to Send Email from a PHP Script using mail() function.?
+How To Send Mail with Attachment in PHP?
+Ob_start() function in Php5?
+Difference between include and include_once in php?
+Difference between php5 and php6?
+Difference between php4 and php5?
+Difference between mysql4 and mysql5?
+How to delete file in PHP?
+Difference between mysql_fetch_object and mysql_fetch_array in php?
+chdir function in php?
+Difference between join and implode in php.?
+Check password length in php?
+Regular expression Basics in php?
+.htaccess file and URL rewrite rule in php?
+Difference between strpos and stripos in php?
+String declaration in php?
+Date function in php?
+Meaning of Cookie in Php?
+File uploading in php?
+Database connection in php?
+Concatenation operators in php?
+Variable declaration in php?
+Meaning of php array?
+What is the difference between characters 23 and x23?
+Difference between echo, print and printf.
+What’s the difference between htmlentities() and htmlspecialchars()?
+What’s the difference between md5(), crc32() and sha1() crypto on PHP?
+What is the difference between mysql_fetch_object and mysql_fetch_array?
+How many ways we can retrieve the data in the result set of MySQL using PHP?
+How can we create a database using PHP and MySQL?
+Can we use include ("abc.php") two times in a PHP page "index.php"?
+What are the different table Engines present in MySQL?
+How can I execute a PHP script using command line?
+What is use of header() function in php ?
+What is meant by nl2br()?
+How we get IP address of client, previous reference page?
+What are the differences between public, private, protected,static,final and volatile?
+What are the different types of errors in PHP?
+What is the functionality of the function strstr and stristr?
+What are the differences between PHP 3 and PHP 4 and PHP 5?
+How can we get second of the current time using date function?
+How can we convert the time zones using PHP?
+What is meant by urlencode and urldocode?
+How can we register the variables into a session?
+How can we increase the execution time of a PHP script?
+How can we get the browser properties using PHP?
+What is the maximum size of a file that can be uploaded using PHP and how can we change this?
+How many ways can we get the value of current session id?
+How can we get the browser properties using PHP?
+How can we destroy the session?
+What are the different functions in sorting an array?
+How can we know the count/number of elements of an array?
+List out the predefined classes in PHP?
+What are the difference between abstract class and interface?
+How can we send mail using JavaScript?
+Explain Normalization concept?
+How can we find the number of rows in a result set using PHP?
+How many ways we can we find the current date using MySQL?
+What type of inheritance that PHP supports?
+What is the functionality of md5 function in PHP?
+How can we know the number of days between two given dates using PHP?
+PHP how to know user has read the email?
+What are default session time and path?
+what are magic methods?
+what is magic quotes?
+what is MVC? why its been used?
+what is CURL?
+What is PHP's mysqli Extension?
+Difference between mysql_connect and mysql_pconnect?
+What is the use of obj_start()?
+What is the difference between session_register and $_session?
+How do you capture audio/video in PHP?
+How can I maintain the count of how many persons have hit my site?
+How would you initialize your strings with single quotes or double quotes?
+Would I use print "$a dollars" or "{$a} dollars" to print out the amount of dollars in this example?
+How to prevent form hijacking in PHP?
+Where does the PHP session stored, either client side or server side?
+How can we submit a form without a submit button?
+What are new features that are in added in PHP5?
+How to handle drop down box change event without refreshing page?
+What Is a Persistent Cookie?
+What is meant by PEAR in php?
+How do we know browser properties?
+What is the difference between mysql_fetch_object and mysql_fetch_array?
+How do you create subdomains using PHP?
+What are the differences between require and include, include_once?
+Explain about the data types in PHP?
+Explain about switch statement in PHP?
+What Is a Session?
+Explain about PHP cookies?
+What would be the differences between PHP and Java?
+Explain about objects in PHP?
+What is the difference between $message and $$message?
+What is htaccess?
+How do you pass a variable by value?
+How can i get ip address?
+Explain about Functions in PHP?
+What is a PHP accelerator?
+Define about declare construct?
+What is the diffrence between Notify URL and Return URL?
+How To Read the Entire File into a Single String?
+Explain about Type Juggling in php?
+How to get the URL domain name in PHP?
+What type of headers have to be added in the mail function to attach a file?
+What is the maximum length of a table name, a database name, or a field name in MySQL?
+How To Convert Strings to Numbers in PHP?
+How To Turn On the Session Support in PHP?
+What is the difference between PHP4 and PHP5?
+What changes I have to do in php.ini file for file uploading?
+How many values can the SET function of MySQL take?
