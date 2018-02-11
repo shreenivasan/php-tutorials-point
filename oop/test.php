@@ -1,13 +1,11 @@
 <?php
- 
-$n = 4;
+$n = 3;
 
-function check_is_prime($n){
-    if($n%2 ==0 || $n%3 ==0 || $n%5 ==0 || $n%7 ==0){
-        echo "not a prime";
-    }else{
-        echo "is prime";
-    }
+for($i=3;$i>=1;$i--){
+    $num = $i;
+    for($j=3;$j>=$i;$j--){
+        echo $num;
+        $num --;
+    }    
+    echo "<br>";
 }
-
-check_is_prime(97);
