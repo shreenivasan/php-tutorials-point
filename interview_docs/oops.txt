@@ -41,3 +41,60 @@
 
     use vs require ?
     use is evaluated at compile-time, require at run-time 
+
+================================================================================
+    
+    What are PHP Traits?
+
+        A Trait is simply a group of methods that you want include within another class.
+
+        In PHP 5.4 a new feature of the Traits was added.
+
+        Trait cannot be instantiated on it’s own.
+
+        A Trait is basically just a way to “copy and paste” code during run time.
+
+            e.g. 
+                trait Sharable { 
+                  public function share($item)
+                  {
+                    return 'share this item';
+                  }
+                }
+
+                You could then include this Trait within other classes like this:
+
+                class Post { 
+                  use Sharable;
+                }
+
+                class Comment {
+                  use Sharable;
+                }
+
+                $post = new Post;
+                echo $post->share(''); // 'share this item' 
+
+                $comment = new Comment;
+                echo $comment->share(''); // 'share this item'
+
+        How are Traits different to Abstract classes?
+
+            A Trait is different to an Abstract class (What are Abstract classes?) because they do not rely on inheritance.
+
+            i.e. No need to override its parents function by its child.
+
+        How are Traits different to Interfaces?
+        
+            Interface contains method which are abstract only.
+
+            where as traits contains method which has implementation.
+
+        What are the benefits of Traits?
+
+            The benefit of using Traits is that you reduce code duplication whilst preventing complicated class,
+            inheritance that might not make sense within the context of your application.
+            
+            This allows you to define simple Traits that are clear and concise and then mix in that functionality where appropriate.    
+
+        

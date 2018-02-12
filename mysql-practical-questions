@@ -1,0 +1,257 @@
+How will you swife values of sex
+
+    Id  Name  Sex  Salary
+    1   A     m    2500
+    2   B     f    1500
+    3   C     m    5500
+    4   D     f    500
+
+O/P
+
+    Id  Name  Sex  Salary
+    1   A     f    2500
+    2   B     m    1500
+    3   C     f    5500
+    4   D     m    500
+
+    update sal 
+    set sex = case 
+                    when sex ='m' then 'f' 
+                    when sex='f' then 'm'
+              end
+
+=======================================================================================
+
+    Given two tables created as follows
+
+        create table test_a(id int);
+
+        create table test_b(id int);
+
+        insert into test_a(id) values
+          (10),
+          (20),
+          (30),
+          (40),
+          (50);
+
+        insert into test_b(id) values
+          (10),
+          (30),
+          (50);
+
+        Write a query to fetch values in table test_a that are and not in test_b without using the NOT 
+        keyword.
+
+=======================================================================================
+
+    Given a table TBL with a field Nmbr that has rows with the following values:
+
+    1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1
+
+    Write a query to add 2 where Nmbr is 0 and add 3 where Nmbr is 1.
+
+        update TBL set Nmbr = case when Nmbr = 0 then Nmbr+2 else Nmbr+3 end;
+
+=======================================================================================
+
+    Nth Max sal
+
+        select sal
+        from sal
+        order by sal desc 
+        limit N-1,1
+
+=======================================================================================
+    
+    SELECT * FROM users;
+
+    user_id  username
+    1        John Doe                                                                                            
+    2        Jane Don                                                                                            
+    3        Alice Jones                                                                                         
+    4        Lisa Romero
+
+    SELECT * FROM training_details;
+
+    user_training_id  user_id  training_id  training_date
+    1                 1        1            "2015-08-02"
+    2                 2        1            "2015-08-03"
+    3                 3        2            "2015-08-02"
+    4                 4        2            "2015-08-04"
+    5                 2        2            "2015-08-03"
+    6                 1        1            "2015-08-02"
+    7                 3        2            "2015-08-04"
+    8                 4        3            "2015-08-03"
+    9                 1        4            "2015-08-03"
+    10                3        1            "2015-08-02"
+    11                4        2            "2015-08-04"
+    12                3        2            "2015-08-02"
+    13                1        1            "2015-08-02"
+    14                4        3            "2015-08-03"
+
+
+    Write a query to to get the list of users who took the a training lesson more 
+    than once in the same day, grouped by user and training lesson, each ordered from the most 
+    recent lesson date to oldest date.
+
+            SELECT
+                  u.user_id,
+                  username,
+                  training_id,
+                  training_date,
+                  count( user_training_id ) AS count
+            FROM users u JOIN training_details t ON t.user_id = u.user_id
+            GROUP BY u.user_id,
+                   username,
+                   training_id,
+                   training_date
+            HAVING count( user_training_id ) > 1
+            ORDER BY training_date DESC;
+
+=======================================================================================
+
+    Given a table dbo.users where the column user_id is a unique numeric identifier, 
+    how can you efficiently select the first 100 odd user_id values from the table?
+
+=======================================================================================
+    
+    What is the difference between the WHERE and HAVING clauses?
+
+        When GROUP BY is not used, 
+
+                Then WHERE and HAVING clauses are essentially equivalent.
+
+        However, when GROUP BY is used:
+
+        The WHERE clause is used to filter records from a result. The filtering occurs before any groupings are made.
+        The HAVING clause is used to filter values from a group (i.e., to check conditions after aggregation into groups has been performed).
+
+=======================================================================================
+
+    CustomerID  CustomerName
+    1           Prashant Kaurav
+    2           Ashish Jha
+    3           Ankit Varma
+    4           Vineet Kumar
+    5           Rahul Kumar
+
+
+    Write a single SQL statement to concatenate all the customer names into the 
+    following single semicolon-separated string:
+
+    O/P
+
+        Prashant Kaurav; Ashish Jha; Ankit Varma; Vineet Kumar; Rahul Kumar
+
+
+    Query :
+
+            select group_concat(username  SEPARATOR ';' ) from users
+
+=======================================================================================
+Given a table Employee having columns empName and empId, what will be the result of the SQL query below?
+
+select empName from Employee order by 2 desc;
+=======================================================================================
+What will be the output of the below query, given an Employee table having 10 records?
+
+        BEGIN TRAN
+        TRUNCATE TABLE Employees
+        ROLLBACK
+        SELECT * FROM Employees
+
+=======================================================================================
+    
+    Table is as follows:
+
+    ID	C1	C2	C3
+    1	Red	Yellow	Blue
+    2	NULL	Red	Green
+    3	Yellow	NULL	Violet
+
+    Print the rows which have ‘Yellow’ in one of the columns C1, C2, or C3, but without using OR.
+
+    SELECT * FROM table
+    WHERE 'Yellow' IN (C1, C2, C3)
+
+=======================================================================================
+
+What is the difference between IN and EXISTS?
+
+    IN:
+
+        Works on List result set
+        Doesn’t work on subqueries resulting in Virtual tables with multiple columns
+        Compares every value in the result list
+        Performance is comparatively SLOW for larger resultset of subquery
+
+    EXISTS:
+
+        Works on Virtual tables
+        Is used with co-related queries
+        Exits comparison when match is found
+        Performance is comparatively FAST for larger resultset of subquery
+
+=======================================================================================
+
+Given the following table named A:
+
+  x
+------
+  2
+ -2
+  4
+ -4
+ -3    
+  0
+  2
+
+Write a single query to calculate the sum of all positive values of x and 
+he sum of all negative values of x.
+
+select sum(case when x>0 then x else 0 end)sum_pos,sum(case when x<0 then x else 0 end)sum_neg from a;
+
+=======================================================================================
+
+Consider the Employee table below.
+
+    Emp_Id	Emp_name	Salary	Manager_Id
+    10	Anil	50000	18
+    11	Vikas	75000	16
+    12	Nisha	40000	18
+    13	Nidhi	60000	17
+    14	Priya	80000	18
+    15	Mohit	45000	18
+    16	Rajesh	90000	–
+    17	Raman	55000	16
+    18	Santosh	65000	17
+    
+    Write a query to generate below output:
+
+    Manager_Id	Manager	Average_Salary_Under_Manager
+    16	Rajesh	65000
+    17	Raman	62500
+    18	Santosh	53750
+
+=======================================================================================
+
+    How to find a duplicate record?
+
+        duplicate records with one field
+
+        duplicate records with more than one field
+
+    duplicate records with one field
+
+        SELECT name, COUNT(email) 
+        FROM users
+        GROUP BY email
+        HAVING COUNT(email) > 1 
+
+    duplicate records with more than one field
+
+        SELECT name, email, COUNT(*)
+        FROM users
+        GROUP BY name, email
+        HAVING COUNT(*) > 1
